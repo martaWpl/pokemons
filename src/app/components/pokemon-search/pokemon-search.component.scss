@@ -1,0 +1,16 @@
+$inputHeight: 82px;
+
+#search-container {
+  position: absolute;
+  top: calc(50% - #{$inputHeight});
+  width: 100%;
+  max-width: none;
+  input {
+    padding: 40px;
+    font-size: 28px;
+    opacity: 0.5;
+  }
+  #search-button {
+    font-size: 22px;
+  }
+}
