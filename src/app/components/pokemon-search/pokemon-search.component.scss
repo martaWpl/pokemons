@@ -2,15 +2,43 @@ $inputHeight: 82px;
 
 #search-container {
   position: absolute;
-  top: calc(50% - #{$inputHeight});
+  top: calc(40% - #{$inputHeight});
   width: 100%;
   max-width: none;
+  #error-message {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    color: red;
+  }
   input {
     padding: 40px;
     font-size: 28px;
-    opacity: 0.5;
+    opacity: 0.8;
   }
   #search-button {
     font-size: 22px;
   }
+  ul {
+    opacity: 0.7;
+    width: 420px;
+    li {
+      color: black;
+      font-weight: bold;
+      a.active {
+        background: darkgray;
+      }
+    }
+  }
+  .pagination {
+    max-width: 33.333333%;
+    .page-link.disabled {
+      cursor: not-allowed !important;
+    }
+  }
+}
+i.fas.fa-search {
+  font-family: fontAwesome;
+  font-style: normal;
 }

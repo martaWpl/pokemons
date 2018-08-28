@@ -1,3 +1,35 @@
-<p>
-  pokemon-details works!
-</p>
+<div class="center-on-page">
+
+  <div class="pokeball">
+    <div class="pokeball__button"></div>
+  </div>
+
+</div>
+<div class="card text-center" id="pokemon-card" *ngIf="pokemon">
+  <div class="card-body">
+    <h2 class="card-title">{{pokemon.name}}</h2>
+    <a id="prev-arrow" (click)="changeCard(pokemon.id-1)"><i class="fas fa-arrow-left"></i></a>
+    <i *ngIf="loading" class="fa fa-spinner fa-spin" style="font-size:44px"></i>
+    <img id="pokemon-photo" [src]="pokemon.sprites.front_default" alt="">
+    <a id="next-arrow" (click)="changeCard(pokemon.id+1)"><i class="fas fa-arrow-right"></i></a>
+    <h3>Stats</h3>
+    <ul class="list-group">
+    <li class="list-group-item" *ngFor="let stat of pokemon.stats">
+      <span class="row" *ngIf="stat.base_stat">Base stat:
+        {{stat.base_stat}}
+      </span>
+      <span class="row" *ngIf="stat.effort"> Effort: {{stat.effort}}</span>
+    </li>
+    </ul>
+  </div>
+  <div>
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </div>
+</div>
+<div id="error" *ngIf="error" class="container">
+  <div class="offset-md-3 col-sm-6 text-center">
+    <p>Pokemon with id: {{pokemonId}} doesn't exist!</p>
+    <img src="assets/sad-pokemon.jpg" alt="" width="100%">
+  <a href="/pokemons">Back to search</a>
+  </div>
+</div>

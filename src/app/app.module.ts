@@ -8,6 +8,9 @@ import { AppRoutingModule } from './app-routing.module';
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {FormsModule} from "@angular/forms";
 import {PokemonService} from "./services/pokemon.service";
+import {HttpClientModule} from "@angular/common/http";
+import {NgxPaginationModule} from "ngx-pagination";
+
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import {PokemonService} from "./services/pokemon.service";
     NgbModule,
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    NgxPaginationModule,
   ],
   providers: [PokemonService],
   bootstrap: [AppComponent]
