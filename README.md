@@ -2,6 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
 
+#Demo
+
+Demo version is available here: <a href="https://pokemons-app.firebaseapp.com/pokemons">https://pokemons-app.firebaseapp.com/pokemons</a>
+
+#Progressive Web App features
+
+Application is in 100% progressive (tested via Lighthouse). You can add this app to home screen on your mobile and run quickly from here.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

@@ -1,17 +1,20 @@
-$cardWidth: 60%;
-$imageWidth: 250px;
+$cardWidth: 50%;
+$imageWidth: 220px;
 
 #pokemon-card {
   width: $cardWidth;
   margin-left: calc(50% - #{$cardWidth/2});
   position: absolute;
   top: 10%;
-
+  @media screen and (max-width: 768px) {
+    width: calc(100% - 20px);
+    margin-left: 10px;
+  }
 
   #back-nav {
     text-align: left;
     i {
-      font-size: 16px;
+      font-size: 12px;
       padding-right: 10px;
     }
     margin-bottom: 20px;
@@ -36,6 +39,9 @@ $imageWidth: 250px;
 
   #pokemon-photo {
     width: $imageWidth;
+    @media screen and (max-width: 425px){
+      width: 160px;
+    }
   }
 
   #next-arrow, #prev-arrow {
