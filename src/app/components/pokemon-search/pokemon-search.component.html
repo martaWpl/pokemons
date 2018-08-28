@@ -1,7 +1,7 @@
 <div class="container" id="search-container">
   <div class="row">
     <div class="offset-md-3 col-sm-6">
-      <p *ngIf="error" id="error-message"> Incorrect Pokemon's Id. Please input number in range 1-100.</p>
+      <p *ngIf="error" id="error-message"> Incorrect Pokemon's Id. Please input a number, prefer range: 1-100.</p>
       <form (ngSubmit)="searchPokemon(pokemonId)">
         <div class="input-group mb-3">
           <input type="text"
@@ -22,7 +22,7 @@
       </form>
     </div>
   </div>
-  <div id="pokemon-list" class="col-md-4 offset-md-4">
+  <div id="pokemon-list">
     <ul class="list-group text-center">
       <li class="list-group-item" *ngFor="let pokemon of pokemons">
         <a [href]="pokemon.appUrl">{{pokemon?.name}}</a>
@@ -34,7 +34,11 @@
         <li *ngFor="let i of [1,2,3,4,5,6,7,8,9,10]" class="page-item">
           <a (click)="changePage(i)" [class.active]="currentPageIndex===i" class="page-link">{{i}}</a>
         </li>
-        <li class="page-item"><a class="page-link" [class.disabled]="currentPageIndex===10" (click)="changePage(currentPageIndex+1)"><span aria-hidden="true">&raquo;</span></a></li>
+        <li class="page-item">
+          <a class="page-link" [class.disabled]="currentPageIndex===10" (click)="changePage(currentPageIndex+1)">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
       </ul>
     </nav>
   </div>

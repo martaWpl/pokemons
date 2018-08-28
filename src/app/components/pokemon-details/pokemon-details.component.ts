@@ -16,6 +16,7 @@ export class PokemonDetailsComponent implements OnInit {
 
   constructor(private pokemonService: PokemonService, private route: ActivatedRoute, private router: Router) {
     this.error = false;
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
     this.route.params.subscribe(pokemon => {
       if(pokemon.id) {
         this.pokemonId= pokemon.id;
