@@ -10,9 +10,9 @@ import {IPokemon} from "../../interfaces/pokemon";
 })
 export class PokemonDetailsComponent implements OnInit {
   private pokemonId: Params;
-  private pokemon: IPokemon;
+  pokemon: IPokemon;
   private loading: boolean;
-  private error: boolean;
+  error: boolean;
 
   constructor(private pokemonService: PokemonService, private route: ActivatedRoute, private router: Router) {
     this.error = false;

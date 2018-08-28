@@ -11,10 +11,10 @@ import {Observable, range} from "rxjs/index";
   styleUrls: ['./pokemon-search.component.scss']
 })
 export class PokemonSearchComponent implements OnInit {
-  private pokemonId: string;
-  private pokemons: Array<IPokemon>;
-  private currentPageIndex: number;
-  private error: boolean;
+  pokemonId: string;
+  pokemons: Array<IPokemon>;
+  currentPageIndex: number;
+  error: boolean;
 
   constructor(private router: Router, private pokemonService: PokemonService) {
     this.pokemonId = "";
