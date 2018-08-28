@@ -19,6 +19,7 @@ $imageWidth: 250px;
       text-decoration:none;
     }
   }
+
   .list-group {
     width: $imageWidth;
     margin-left: calc(50% - #{$imageWidth}/2);
@@ -32,9 +33,11 @@ $imageWidth: 250px;
       padding-right: 20px;
     }
   }
+
   #pokemon-photo {
     width: $imageWidth;
   }
+
   #next-arrow, #prev-arrow {
     cursor: pointer;
   }
@@ -127,7 +130,7 @@ $imageWidth: 250px;
 }
 
 i {
-  font-family: FontAwesome;
+  font-family: FontAwesome, sans-serif;
   font-size: 44px;
   font-style: normal;
   color: darkgray;

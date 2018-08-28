@@ -1,20 +1,26 @@
 <div class="center-on-page">
-
   <div class="pokeball">
     <div class="pokeball__button"></div>
   </div>
-
 </div>
+
 <div class="card text-center" id="pokemon-card" *ngIf="pokemon">
   <div class="card-body">
     <div class="col-xs-12" id="back-nav">
       <a href="pokemons" class="back"><i class="fas fa-long-arrow-left"></i>Back to search page</a>
     </div>
     <h2 class="card-title">{{pokemon.name}}</h2>
-    <a id="prev-arrow" (click)="changeCard(pokemon.id-1)"><i class="fas fa-arrow-left"></i></a>
+    <a id="prev-arrow"
+       *ngIf="pokemon.id!=1"
+       (click)="changeCard(pokemon.id-1)">
+      <i class="fas fa-arrow-left"></i>
+    </a>
     <i *ngIf="loading" class="fa fa-spinner fa-spin" style="font-size:44px"></i>
     <img id="pokemon-photo" [src]="pokemon.sprites.front_default" alt="">
-    <a id="next-arrow" (click)="changeCard(pokemon.id+1)"><i class="fas fa-arrow-right"></i></a>
+    <a id="next-arrow"
+       (click)="changeCard(pokemon.id+1)">
+      <i class="fas fa-arrow-right"></i>
+    </a>
     <h3>Stats</h3>
     <ul class="list-group">
       <li class="list-group-item">
