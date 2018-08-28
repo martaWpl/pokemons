@@ -10,6 +10,8 @@ import {FormsModule} from "@angular/forms";
 import {PokemonService} from "./services/pokemon.service";
 import {HttpClientModule} from "@angular/common/http";
 import {NgxPaginationModule} from "ngx-pagination";
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -25,6 +27,7 @@ import {NgxPaginationModule} from "ngx-pagination";
     FormsModule,
     HttpClientModule,
     NgxPaginationModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [PokemonService],
   bootstrap: [AppComponent]
