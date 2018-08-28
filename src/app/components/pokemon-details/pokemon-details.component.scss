@@ -1,8 +1,9 @@
-$card-width: 60%;
+$cardWidth: 60%;
+$imageWidth: 250px;
 
 #pokemon-card {
-  width: $card-width;
-  margin-left: calc(50% - #{$card-width/2});
+  width: $cardWidth;
+  margin-left: calc(50% - #{$cardWidth/2});
   position: absolute;
   top: 10%;
 
@@ -18,11 +19,21 @@ $card-width: 60%;
       text-decoration:none;
     }
   }
-  #pokemon-photo {
-    width: 250px;
+  .list-group {
+    width: $imageWidth;
+    margin-left: calc(50% - #{$imageWidth}/2);
+    .list-group-item:first-child {
+        background: aliceblue;
+    }
+    .base-stat {
+      padding-left: 20px;
+    }
+    .effort {
+      padding-right: 20px;
+    }
   }
-  .progress {
-    width: 80%;
+  #pokemon-photo {
+    width: $imageWidth;
   }
   #next-arrow, #prev-arrow {
     cursor: pointer;

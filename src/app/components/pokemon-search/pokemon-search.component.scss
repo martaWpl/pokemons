@@ -1,11 +1,22 @@
 $inputHeight: 82px;
 $ulWidth: 420px;
 
+@media (max-width: 736px) {
+  div#search-row, .offset-md-3 {
+    margin-left: calc(50% - 210px);
+  }
+}
+
 #search-container {
   position: absolute;
   top: calc(40% - #{$inputHeight});
   width: 100%;
   max-width: none;
+  #search-row {
+    min-width: 420px;
+    margin-left: calc(50% - 210px);
+    margin-bottom: 20px;
+  }
   #error-message {
     padding: 0.75rem 1.25rem;
     margin-bottom: -1px;
@@ -17,8 +28,8 @@ $ulWidth: 420px;
     margin-left: calc(50% - #{$ulWidth}/2);
   }
   input {
-    padding: 40px;
-    font-size: 28px;
+    padding: 40px 10px;
+    font-size: 22px;
     opacity: 0.8;
   }
   #search-button {

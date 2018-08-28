@@ -1,6 +1,6 @@
 <div class="container" id="search-container">
   <div class="row">
-    <div class="offset-md-3 col-sm-6">
+    <div class="offset-sm-3 col-sm-6">
       <p *ngIf="error" id="error-message"> Incorrect Pokemon's Id. Please input a number, prefer range: 1-100.</p>
       <form (ngSubmit)="searchPokemon(pokemonId)">
         <div class="input-group mb-3">
@@ -14,8 +14,8 @@
                  required
           >
           <div class="input-group-append">
-            <button class="btn btn-primary" type="submit" id="search-button"><i class="fas fa-search"></i>
-              Search
+            <button class="btn btn-primary" type="submit" id="search-button">
+              <i class="fas fa-search" style="padding-right:10px"></i><span>Search</span>
             </button>
           </div>
         </div>
